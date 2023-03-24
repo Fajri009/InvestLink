@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "544408186736",
+    "project_id": "investlink-d782e",
+    "storage_bucket": "investlink-d782e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544408186736:android:57a3befb5ce5e1e242e9b5",
+        "android_client_info": {
+          "package_name": "eu.tutorials.investlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544408186736-tid8skc5o170eo5106kg6k4ul02ar7n1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eu.tutorials.investlink",
+            "certificate_hash": "2368e29cee6e2a1c48f6e4b65f76c15440ad13b4"
+          }
+        },
+        {
+          "client_id": "544408186736-ejcono3q1ei083hk3jfrrd55g3m38i9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDjvp_suORlFTUuXND3wgZ2tz9QBt7jJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544408186736-ejcono3q1ei083hk3jfrrd55g3m38i9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
