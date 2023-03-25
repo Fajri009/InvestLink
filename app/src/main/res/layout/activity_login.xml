@@ -51,10 +51,7 @@
                 android:hint="Password">
             </EditText>
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <TextView
+   <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lupaSandi"
