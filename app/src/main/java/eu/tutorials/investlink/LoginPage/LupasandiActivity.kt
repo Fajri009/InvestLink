@@ -1,4 +1,4 @@
-package eu.tutorials.investlink
+package eu.tutorials.investlink.LoginPage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import eu.tutorials.investlink.R
 
 
 class LupasandiActivity : AppCompatActivity() {

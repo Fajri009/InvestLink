@@ -1,4 +1,4 @@
-package eu.tutorials.investlink
+package eu.tutorials.investlink.LoginPage
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.auth.FirebaseAuth
+import eu.tutorials.investlink.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (firebaseAuth.currentUser!==null){
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
     /*InCommit method, supaya tidak usah mengetik getID secara terus menerus*/
@@ -65,12 +65,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun lupaSandiAct() {
        lupapass.setOnClickListener{
-           startActivity(Intent(this,LupasandiActivity::class.java))
+           startActivity(Intent(this, LupasandiActivity::class.java))
        }
     }
     private fun daftarAct() {
         daftar.setOnClickListener {
-            startActivity(Intent(this,RegisterActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
     /*Login Activity*/
@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
         waiting.show()
         firebaseAuth.signInWithEmailAndPassword(email,password)
             .addOnSuccessListener {
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }
             .addOnFailureListener{
                 error -> Toast.makeText(this,error.localizedMessage, LENGTH_SHORT).show()

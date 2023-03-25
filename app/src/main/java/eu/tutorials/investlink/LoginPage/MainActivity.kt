@@ -1,8 +1,9 @@
-package eu.tutorials.investlink
+package eu.tutorials.investlink.LoginPage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
+import eu.tutorials.investlink.R
 
 class MainActivity : AppCompatActivity() {
 

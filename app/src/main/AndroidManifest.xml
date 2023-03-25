@@ -12,13 +12,13 @@
         android:theme="@style/Theme.InvestLink"
         tools:targetApi="31">
         <activity
-            android:name=".LupasandiActivity"
+            android:name=".LoginPage.LupasandiActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".LoginPage.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginPage.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginPage.MainActivity"
             android:exported="false" />
     </application>
 
