@@ -6,21 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".LoginPage.LoginActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_height="wrap_content"
-        android:text="Masuk"
-        android:gravity="center_horizontal"
-        android:layout_margin="40dp"
-        android:padding="20dp"
-        android:textSize="20dp"
-        android:id="@+id/txt1">
-    </TextView>
+        android:layout_width="match_parent">
+
+        <TextView
+            android:text="Masuk"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/biru_gelap"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/txt1"
+        android:layout_below="@id/toolbar"
         android:layout_margin="40dp"
         android:id="@+id/form">
         <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +64,7 @@
             android:layout_marginBottom="20dp"
             android:layout_below="@id/pass"
             android:gravity="end"
-            android:textColor="#FF0000FF">
+            android:textColor="@color/biru_gelap">
         </TextView>
     </LinearLayout>
     <Button
@@ -69,7 +74,8 @@
         android:padding="18dp"
         android:id="@+id/loginBtn"
         android:layout_centerInParent="true"
-        android:text="Login">
+        android:text="Login"
+        android:backgroundTint="@color/biru_gelap">
     </Button>
 
     <LinearLayout
@@ -89,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text=" Daftar Sekarang"
             android:id="@+id/daftar"
-            android:textColor="#FF0000FF">
+            android:textColor="@color/biru_gelap">
         </TextView>
     </LinearLayout>
 </RelativeLayout>

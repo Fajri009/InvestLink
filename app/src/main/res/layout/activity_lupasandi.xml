@@ -6,21 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".LoginPage.LupasandiActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_height="wrap_content"
-        android:text="Lupa Kata Sandi"
-        android:gravity="center_horizontal"
-        android:layout_margin="40dp"
-        android:padding="20dp"
-        android:textSize="20dp"
-        android:id="@+id/txt_sandi">
-    </TextView>
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/backPage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:tint="@color/biru_gelap"
+            />
+
+        <TextView
+            android:text="Lupa Kata Sandi"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/biru_gelap"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/txt_sandi"
+        android:layout_below="@id/toolbar"
         android:layout_margin="40dp"
         android:id="@+id/form">
         <com.google.android.material.textfield.TextInputLayout
@@ -36,15 +49,32 @@
                 android:hint="Masukkan Email">
             </EditText>
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:boxBackgroundColor="@color/cardview_light_background">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_verif"
+                android:inputType="number"
+                android:hint="Masukkan Nomer Telepon">
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/form"
-        android:padding="18dp"
-        android:id="@+id/verifBtn"
-        android:layout_centerInParent="true"
-        android:text="Verifikasi">
-    </Button>
+        android:id="@+id/btnVerif"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/biru_gelap"
+        app:cornerRadius="50dp"
+        android:text="Verifikasi"
+        android:textAllCaps="false"
+        android:textColorLink="@color/biru_gelap"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
 
 </RelativeLayout>
