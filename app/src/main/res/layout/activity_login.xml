@@ -9,73 +9,75 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-        <TextView
-            android:text="Masuk"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textColor="@color/biru_gelap"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            />
+        android:layout_width="match_parent"
+        android:layout_margin="98dp">
     </androidx.appcompat.widget.Toolbar>
+
     <LinearLayout
+        android:id="@+id/form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/toolbar"
-        android:layout_margin="40dp"
-        android:id="@+id/form">
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            app:boxBackgroundColor="@color/cardview_light_background">
+            app:boxBackgroundColor="@color/cardview_light_background"
+            android:layout_marginBottom="40dp">
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/email"
-                android:inputType="textEmailAddress"
-                android:hint="Abcde@gmail.com">
+                android:hint="Abcde@gmail.com"
+                android:inputType="textEmailAddress">
 
             </EditText>
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             app:boxBackgroundColor="@color/cardview_light_background"
             app:passwordToggleEnabled="true">
+
             <EditText
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/pass"
-                android:inputType="textPassword"
-                android:hint="Password">
-            </EditText>
+                android:hint="Password"
+                android:inputType="textPassword"></EditText>
         </com.google.android.material.textfield.TextInputLayout>
-   <TextView
+
+        <TextView
+            android:id="@+id/lupaSandi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lupaSandi"
-            android:text="Lupa Kata Sandi?"
-            android:layout_marginBottom="20dp"
             android:layout_below="@id/pass"
+            android:layout_marginBottom="20dp"
             android:gravity="end"
-            android:textColor="@color/biru_gelap">
-        </TextView>
+            android:text="Forget Password?"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"></TextView>
     </LinearLayout>
+
     <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/form"
-        android:padding="18dp"
         android:id="@+id/loginBtn"
+        android:layout_width="285dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/form"
         android:layout_centerInParent="true"
-        android:text="Login"
-        android:backgroundTint="@color/biru_gelap">
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/btn_color"
+        android:text="Sign In"
+        android:textSize="14dp"
+        android:textColor="@color/text_primary"
+        app:cornerRadius="10dp"
+        android:shadowDy="40"
+        android:shadowColor="@color/btn_shadow">
     </Button>
 
     <LinearLayout
@@ -83,19 +85,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/loginBtn"
-        android:layout_margin="40dp"
+        android:layout_margin="30dp"
         android:gravity="center_horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belum Punya Akun?">
+            android:text="Don't have an account?"
+            android:textColor="@color/text_secondary"
+            android:textSize="14dp">
         </TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Daftar Sekarang"
+            android:text=" Sign Up"
             android:id="@+id/daftar"
-            android:textColor="@color/biru_gelap">
+            android:textColor="@color/text_primary">
         </TextView>
     </LinearLayout>
 </RelativeLayout>
