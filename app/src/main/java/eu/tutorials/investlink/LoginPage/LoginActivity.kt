@@ -70,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
     }
     private fun daftarAct() {
         daftar.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, RegisterNama::class.java))
         }
     }
     /*Login Activity*/

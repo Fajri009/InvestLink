@@ -15,8 +15,17 @@
             android:name=".LoginPage.LupasandiActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginPage.RegisterActivity"
+            android:name=".LoginPage.RegisterNama"
             android:exported="false" />
+        <activity
+            android:name=".LoginPage.RegisterEmail"
+            android:exported="true" />
+        <activity
+            android:name=".LoginPage.RegisterPassword"
+            android:exported="true" />
+        <activity
+            android:name=".LoginPage.RegisterCode"
+            android:exported="true" />
         <activity
             android:name=".LoginPage.LoginActivity"
             android:exported="true">
@@ -30,5 +39,4 @@
             android:name=".LoginPage.MainActivity"
             android:exported="false" />
     </application>
-
 </manifest>

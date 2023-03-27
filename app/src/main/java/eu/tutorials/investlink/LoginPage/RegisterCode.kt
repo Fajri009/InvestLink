@@ -7,33 +7,34 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import eu.tutorials.investlink.R
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterCode : AppCompatActivity() {
     private lateinit var backPage : ImageView
-    private lateinit var getNamaDepan : TextView
+    private lateinit var getCode : TextView
     private lateinit var btnNext : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_registerrefferalcode)
 
         backPage = findViewById(R.id.backPage)
-        getNamaDepan = findViewById(R.id.namaDepan)
+        getCode = findViewById(R.id.code)
         btnNext = findViewById(R.id.btnNext)
 
-        btnNext.setOnClickListener{
-            if(getNamaDepan.text.isNotEmpty()) {
-
-            } else{
-                Toast.makeText(this,"Isi nama depan terlebih dahulu", Toast.LENGTH_SHORT).show()
-            }
-        }
-
+        buttonNext()
         backPage()
     }
 
     private fun backPage() {
         backPage.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    private fun buttonNext() {
+        btnNext.setOnClickListener{
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }
