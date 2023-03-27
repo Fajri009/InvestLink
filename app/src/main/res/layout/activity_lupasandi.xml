@@ -34,7 +34,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/toolbar"
-        android:layout_margin="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/form">
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -69,14 +72,13 @@
         android:layout_height="55dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/theme_color"
-        app:cornerRadius="10dp"
+        app:cornerRadius="30dp"
         android:text="Verifikasi"
-        android:textSize="14dp"
         android:textColor="@color/text_primary"
         android:textAllCaps="false"
         android:textColorLink="@color/theme_color"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="140dp"
         android:shadowDy="40"
         android:shadowColor="@color/btn_shadow"
         />
