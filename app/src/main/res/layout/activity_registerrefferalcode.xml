@@ -27,6 +27,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:layout_gravity="center"
+            android:fontFamily="@font/nunitobold"
             />
     </androidx.appcompat.widget.Toolbar>
 
@@ -60,7 +61,8 @@
             android:layout_marginTop="15dp"
             android:text="Refferal Code"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:fontFamily="@font/nunitoSemiBold"/>
 
         <TextView
             android:id="@+id/description"
@@ -69,7 +71,8 @@
             android:layout_marginTop="10dp"
             android:text="Get refferal code from your friend or your family"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:fontFamily="@font/nunitoregular"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -105,6 +108,7 @@
             android:layout_height="wrap_content"
             android:text="*Optional"
             android:textColor="@color/red"
+            android:fontFamily="@font/NunitoLight"
             />
     </LinearLayout>
 

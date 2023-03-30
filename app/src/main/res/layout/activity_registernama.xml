@@ -27,6 +27,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:layout_gravity="center"
+            android:fontFamily="@font/nunitobold"
             />
     </androidx.appcompat.widget.Toolbar>
 
@@ -62,7 +63,8 @@
             android:layout_marginTop="15dp"
             android:text="What's your name?"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:fontFamily="@font/nunitoSemiBold"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
