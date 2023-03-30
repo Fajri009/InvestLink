@@ -63,7 +63,8 @@
             android:text="What's your E-mail Address?"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:fontFamily="@font/nunitoSemiBold"/>
+            android:fontFamily="@font/nunitosemibold"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -90,7 +91,8 @@
             android:text="What's your phone number?"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:fontFamily="@font/nunitoSemiBold"/>
+            android:fontFamily="@font/nunitosemibold"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

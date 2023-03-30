@@ -62,7 +62,8 @@
             android:text="Forget Password?"
             android:textColor="@color/text_primary"
             android:textSize="14dp"
-            android:fontFamily="@font/nunitosemibold"></TextView>
+            android:fontFamily="@font/nunitosemibold"
+            ></TextView>
     </LinearLayout>
 
     <Button
@@ -93,7 +94,8 @@
             android:text="Don't have an account?"
             android:textColor="@color/text_secondary"
             android:textSize="14dp"
-            android:fontFamily="@font/nunitomedium">
+            android:fontFamily="@font/nunitomedium"
+            >
         </TextView>
         <TextView
             android:layout_width="wrap_content"
@@ -101,7 +103,8 @@
             android:text=" Sign Up"
             android:id="@+id/daftar"
             android:textColor="@color/text_primary"
-            android:fontFamily="@font/nunitomedium">
+            android:fontFamily="@font/nunitomedium"
+            >
         </TextView>
     </LinearLayout>
 </RelativeLayout>
