@@ -10,6 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import eu.tutorials.investlink.R
 
 class LoginActivity : AppCompatActivity() {
@@ -21,14 +23,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnLogin: Button
     private lateinit var lupapass : TextView
     private lateinit var waiting: ProgressDialog
-    var firebaseAuth = FirebaseAuth.getInstance()
+    var firestore = FirebaseFirestore.getInstance()
 
-    override fun onStart() {
-        super.onStart()
-        if (firebaseAuth.currentUser!==null){
-            startActivity(Intent(this, MainActivity::class.java))
-        }
-    }
+
     /*InCommit method, supaya tidak usah mengetik getID secara terus menerus*/
     fun inCommit(){
         getEmail = findViewById(R.id.email)
@@ -46,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
 
         /*Loading*/
         waiting = ProgressDialog(this)
-        waiting.setTitle("Logging")
+        waiting.setTitle("Log In")
         waiting.setMessage("Tunggu Sebentar...")
 
         /*Jika Button di click dan email dan password sudah terisi maka jalankan method*/
@@ -75,20 +72,14 @@ class LoginActivity : AppCompatActivity() {
     }
     /*Login Activity*/
     private fun loginAct(){
-        val email = getEmail.text.toString()
-        val password = getPassword.text.toString()
 
-        waiting.show()
-        firebaseAuth.signInWithEmailAndPassword(email,password)
+        firestore.collection("user")
+            .get()
             .addOnSuccessListener {
                 startActivity(Intent(this, MainActivity::class.java))
             }
-            .addOnFailureListener{
-                error -> Toast.makeText(this,error.localizedMessage, LENGTH_SHORT).show()
-
-            }
-            .addOnCompleteListener{
-                waiting.dismiss()
+            .addOnFailureListener {
+                Toast.makeText(this, "Eamil dan Password Tidak cocok", LENGTH_SHORT).show()
             }
 
     }
