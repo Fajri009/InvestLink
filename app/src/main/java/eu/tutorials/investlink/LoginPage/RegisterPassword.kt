@@ -49,16 +49,29 @@ class RegisterPassword : AppCompatActivity() {
     }
 
     private fun buttonNext() {
-        btnNext.setOnClickListener{
-            if(getPassword.text.isNotEmpty() && getConfirmPassword.text.isNotEmpty()) {
-                val password = getPassword.text.toString()
-                val confirmPassword = getConfirmPassword.text.toString()
+        val namaDepan = intent.getStringExtra("firstName")
+        val namaBelakang = intent.getStringExtra("lastName")
+        val email = intent.getStringExtra("email")
+        val noTelp = intent.getStringExtra("noTelp")
+        val password = getPassword.text
+        val confirmPassword = getConfirmPassword.text
 
-                if (password == confirmPassword) {
-                    if(isPasswordValid(password)) {
-                        startActivity(Intent(this, RegisterCode::class.java))
+        btnNext.setOnClickListener{
+            if(password.isNotEmpty() && confirmPassword.isNotEmpty()) {
+                val passwordStr = getPassword.text.toString()
+                val confirmPasswordStr = getConfirmPassword.text.toString()
+
+                if(passwordStr == confirmPasswordStr) {
+                    if(isPasswordValid(passwordStr)) {
+                        val intent = Intent(this, RegisterCode::class.java)
+                        intent.putExtra("firstName", namaDepan.toString())
+                        intent.putExtra("lastName", namaBelakang.toString())
+                        intent.putExtra("email", email.toString())
+                        intent.putExtra("noTelp", noTelp.toString())
+                        intent.putExtra("password", passwordStr)
+                        startActivity(intent)
                     } else {
-                        Toast.makeText(this, "Must contain at least 1 uppercase letter, 1 number, and 1 symbol and password must contain at least 8 characters", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Password tidak memenuhi kriteria", Toast.LENGTH_SHORT).show()
                     }
                 } else {
                     Toast.makeText(this,"Password tidak cocok", Toast.LENGTH_SHORT).show()

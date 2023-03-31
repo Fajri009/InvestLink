@@ -7,12 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.FirebaseFirestore
 import eu.tutorials.investlink.R
 
 class RegisterEmail : AppCompatActivity()  {
-    private lateinit var firebaseAuth : FirebaseAuth
     private lateinit var backPage : ImageView
     private lateinit var getEmail : TextView
     private lateinit var getNoTelp : TextView
@@ -21,8 +19,6 @@ class RegisterEmail : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registeremail)
-
-        firebaseAuth = FirebaseAuth.getInstance()
 
         backPage = findViewById(R.id.backPage)
         getEmail = findViewById(R.id.email)
@@ -40,16 +36,27 @@ class RegisterEmail : AppCompatActivity()  {
     }
 
     private fun buttonNext() {
-        btnNext.setOnClickListener{
-            if(getEmail.text.isNotEmpty() && getNoTelp.text.isNotEmpty()) {
-                if(!getEmail.text.endsWith("@gmail.com") || !getNoTelp.text.startsWith("8")) {
-                    Toast.makeText(this,"Email atau nomor telepon tidak valid", Toast.LENGTH_SHORT).show()
+        btnNext.setOnClickListener {
+            val namaDepan = intent.getStringExtra("firstName")
+            val namaBelakang = intent.getStringExtra("lastName")
+            val email = getEmail.text
+            val noTelp = getNoTelp.text
+
+            if(email.isNotEmpty() && noTelp.isNotEmpty()) {
+                if(!email.endsWith("@gmail.com") || !noTelp.startsWith("08")) {
+                    Toast.makeText(this, "Email atau nomor telepon tidak valid", Toast.LENGTH_SHORT).show()
                 } else {
-                    startActivity(Intent(this, RegisterPassword::class.java))
+                    val intent = Intent(this, RegisterPassword::class.java)
+                    intent.putExtra("firstName", namaDepan.toString())
+                    intent.putExtra("lastName", namaBelakang.toString())
+                    intent.putExtra("email", email.toString())
+                    intent.putExtra("noTelp", noTelp.toString())
+                    startActivity(intent)
                 }
-            } else{
-                Toast.makeText(this,"Isi email dan nomor telepon terlebih dahulu", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Isi email dan nomor telepon terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
 }

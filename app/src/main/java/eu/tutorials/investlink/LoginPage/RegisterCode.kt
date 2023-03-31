@@ -8,9 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import eu.tutorials.investlink.R
 
 class RegisterCode : AppCompatActivity() {
+    var firestore = FirebaseFirestore.getInstance()
     private lateinit var backPage : ImageView
     private lateinit var getCode : TextView
     private lateinit var btnNext : Button
@@ -34,8 +36,30 @@ class RegisterCode : AppCompatActivity() {
     }
 
     private fun buttonNext() {
+        val namaDepan = intent.getStringExtra("firstName")
+        val namaBelakang = intent.getStringExtra("lastName")
+        val email = intent.getStringExtra("email")
+        val noTelp = intent.getStringExtra("noTelp")
+        val password = intent.getStringExtra("password")
+
         btnNext.setOnClickListener{
-            startActivity(Intent(this, LoginActivity::class.java))
+            val user = hashMapOf(
+                "firstName" to namaDepan.toString(),
+                "lastName" to namaBelakang.toString(),
+                "email" to email.toString(),
+                "noTelp" to noTelp.toString(),
+                "password" to password.toString()
+            )
+
+            firestore.collection("user")
+                .add(user)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Data berhasil disimpan ke database", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, LoginActivity::class.java))
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Data gagal disimpan ke database", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 }

@@ -7,11 +7,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
 import eu.tutorials.investlink.R
 
 class RegisterNama : AppCompatActivity() {
-    private lateinit var firebaseAuth : FirebaseAuth
     private lateinit var backPage : ImageView
     private lateinit var getNamaDepan : TextView
     private lateinit var getNamaBelakang : TextView
@@ -20,8 +18,6 @@ class RegisterNama : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registernama)
-
-        firebaseAuth = FirebaseAuth.getInstance()
 
         backPage = findViewById(R.id.backPage)
         getNamaDepan = findViewById(R.id.namaDepan)
@@ -44,10 +40,14 @@ class RegisterNama : AppCompatActivity() {
 
         btnNext.setOnClickListener{
             if(namaDepan.isNotEmpty() && namaBelakang.isNotEmpty()) {
-                startActivity(Intent(this, RegisterEmail::class.java))
-            } else{
+                val intent = Intent(this, RegisterEmail::class.java)
+                intent.putExtra("firstName", namaDepan.toString())
+                intent.putExtra("lastName", namaBelakang.toString())
+                startActivity(intent)
+            } else {
                 Toast.makeText(this,"Isi nama depan dan nama belakang terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
 }
