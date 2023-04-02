@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import eu.tutorials.investlink.R
@@ -24,7 +25,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var lupapass : TextView
     private lateinit var waiting: ProgressDialog
     var firestore = FirebaseFirestore.getInstance()
-
 
     /*InCommit method, supaya tidak usah mengetik getID secara terus menerus*/
     fun inCommit(){
@@ -72,16 +72,14 @@ class LoginActivity : AppCompatActivity() {
     }
     /*Login Activity*/
     private fun loginAct(){
-
         firestore.collection("user")
             .get()
             .addOnSuccessListener {
-                startActivity(Intent(this, MainActivity::class.java))
+                   startActivity(Intent(this, MainActivity::class.java))
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Eamil dan Password Tidak cocok", LENGTH_SHORT).show()
             }
-
     }
 
 }
