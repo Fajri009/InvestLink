@@ -6,19 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".LoginPage.fragment.profile_fragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/backPage"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/img" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile Fragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_width="180dp"
+            android:layout_height="31dp"
+            android:text="Balance"
+            android:layout_margin="20dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nunitobold"
+            android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/chatAdmin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/chat" />
+    </androidx.appcompat.widget.Toolbar>
+
+
 </FrameLayout>

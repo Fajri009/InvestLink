@@ -8,36 +8,55 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
-
+        android:layout_height="wrap_content"
+        >
         <ImageView
             android:id="@+id/backPage"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/img"
-            app:tint="@color/text_primary" />
-
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/img" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunitobold"
             android:text="Business Investment"
-            android:textColor="@color/text_primary"
-            android:textSize="23sp"
-            android:textStyle="bold" />
-
+            android:layout_margin="20dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nunitobold"
+            android:textAlignment="center"/>
         <ImageView
-            android:id="@+id/chat"
+            android:id="@+id/chatAdmin"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/chat"
-            app:tint="@color/text_primary" />
-
-
+            android:layout_margin="10dp"
+            android:src="@drawable/chat" />
     </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+
+        >
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/preference"
+            android:layout_toEndOf="@id/search_view">
+        </ImageView>
+    </RelativeLayout>
+
 
 
 </FrameLayout>
