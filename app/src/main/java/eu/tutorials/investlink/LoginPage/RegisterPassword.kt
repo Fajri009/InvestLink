@@ -11,7 +11,6 @@ import com.google.firebase.auth.FirebaseAuth
 import eu.tutorials.investlink.R
 
 class RegisterPassword : AppCompatActivity() {
-    private lateinit var firebaseAuth : FirebaseAuth
     private lateinit var backPage : ImageView
     private lateinit var getPassword : TextView
     private lateinit var getConfirmPassword : TextView
@@ -49,14 +48,14 @@ class RegisterPassword : AppCompatActivity() {
     }
 
     private fun buttonNext() {
-        val namaDepan = intent.getStringExtra("firstName")
-        val namaBelakang = intent.getStringExtra("lastName")
-        val email = intent.getStringExtra("email")
-        val noTelp = intent.getStringExtra("noTelp")
-        val password = getPassword.text
-        val confirmPassword = getConfirmPassword.text
-
         btnNext.setOnClickListener{
+            val namaDepan = intent.getStringExtra("firstName")
+            val namaBelakang = intent.getStringExtra("lastName")
+            val email = intent.getStringExtra("email")
+            val noTelp = intent.getStringExtra("noTelp")
+            val password = getPassword.text
+            val confirmPassword = getConfirmPassword.text
+
             if(password.isNotEmpty() && confirmPassword.isNotEmpty()) {
                 val passwordStr = getPassword.text.toString()
                 val confirmPasswordStr = getConfirmPassword.text.toString()

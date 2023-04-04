@@ -35,10 +35,9 @@ class RegisterNama : AppCompatActivity() {
     }
 
     private fun buttonNext() {
-        val namaDepan = getNamaDepan.text
-        val namaBelakang = getNamaBelakang.text
-
         btnNext.setOnClickListener{
+            val namaDepan = getNamaDepan.text
+            val namaBelakang = getNamaBelakang.text
             if(namaDepan.isNotEmpty() && namaBelakang.isNotEmpty()) {
                 val intent = Intent(this, RegisterEmail::class.java)
                 intent.putExtra("firstName", namaDepan.toString())

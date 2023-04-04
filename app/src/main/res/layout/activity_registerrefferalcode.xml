@@ -15,7 +15,7 @@
             android:id="@+id/backPage"
             android:layout_height="35dp"
             android:layout_width="35dp"
-            android:src="@drawable/img"
+            android:src="@drawable/back_button"
             app:tint="@color/text_primary"
             />
 
@@ -36,49 +36,54 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
         android:layout_marginLeft="16dp"
-        android:id="@+id/progressBar">
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/progressBar"
+        android:orientation="horizontal">
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="82dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:progress="0"
-            android:scaleY="2"
-            android:radius="15dp"
-            android:progressTint="@color/theme_color"
-            />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="82dp"
-            android:layout_height="wrap_content"
-            android:progress="0"
-            android:layout_marginLeft="10dp"
-            android:scaleY="2"
-            android:progressTint="@color/theme_color"
-            />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="82dp"
-            android:layout_height="wrap_content"
-            android:progress="0"
-            android:layout_marginLeft="10dp"
-            android:scaleY="2"
-            app:cornerRadius="10dp"
-            android:progressTint="@color/theme_color"
-            />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="82dp"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="0.5"
             android:progress="100"
-            android:layout_marginLeft="10dp"
-            android:scaleY="2"
-            app:cornerRadius="10dp"
+            android:progressTint="@color/grey"
+            android:layout_marginStart="10dp"
+            android:progressDrawable="@drawable/rounded_progress_bar"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="0.5"
+            android:progress="0"
+            android:progressTint="@color/grey"
+            android:layout_marginStart="10dp"
+            android:progressDrawable="@drawable/rounded_progress_bar"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="0.5"
+            android:progress="0"
+            android:progressTint="@color/grey"
+            android:layout_marginStart="10dp"
+            android:progressDrawable="@drawable/rounded_progress_bar"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="0.5"
+            android:progress="0"
             android:progressTint="@color/theme_color"
-            />
+            android:layout_marginStart="10dp"
+            android:progressDrawable="@drawable/rounded_progress_bar"/>
     </LinearLayout>
 
 
@@ -116,8 +121,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/cardview_light_background"
-            app:boxStrokeColor="@color/theme_color"
-            app:hintTextColor="@color/theme_color"
             android:layout_marginTop="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusBottomEnd="10dp"

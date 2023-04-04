@@ -8,9 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cyan">#a1bcf3</color>
+    <color name="transparent">#00000000</color>
     <color name="btn_shadow">#8A959E</color>
     <color name="theme_color">#FFC700</color>
     <color name="text_primary">#2D2424</color>
     <color name="text_secondary">#96928E</color>
     <color name="red">#E84949</color>
+    <color name="grey">#B3ADA7</color>
 </resources>

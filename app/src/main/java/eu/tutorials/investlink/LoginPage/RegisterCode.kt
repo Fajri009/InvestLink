@@ -41,6 +41,8 @@ class RegisterCode : AppCompatActivity() {
         val email = intent.getStringExtra("email")
         val noTelp = intent.getStringExtra("noTelp")
         val password = intent.getStringExtra("password")
+        val code = getCode.text
+        val intent = Intent(this, LoginActivity::class.java)
 
         btnNext.setOnClickListener{
             val user = hashMapOf(
@@ -48,14 +50,16 @@ class RegisterCode : AppCompatActivity() {
                 "lastName" to namaBelakang.toString(),
                 "email" to email.toString(),
                 "noTelp" to noTelp.toString(),
-                "password" to password.toString()
+                "password" to password.toString(),
+                "code" to code.toString()
             )
 
             firestore.collection("user")
                 .add(user)
                 .addOnSuccessListener {
                     Toast.makeText(this, "Data berhasil disimpan ke database", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, LoginActivity::class.java))
+                    intent.putExtra("code", code.toString())
+                    startActivity(intent)
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Data gagal disimpan ke database", Toast.LENGTH_SHORT).show()

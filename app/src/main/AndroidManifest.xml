@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginPage.MainActivity"
+            android:name=".HomePage.HomePage"
             android:exported="false" />
     </application>
 </manifest>
