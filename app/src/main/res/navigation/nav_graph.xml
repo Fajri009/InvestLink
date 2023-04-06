@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/portofolio_fragment"
+        android:name="eu.tutorials.investlink.HomePage.fragment.portofolio_fragment"
+        android:label="fragment_portofolio_fragment"
+        tools:layout="@layout/fragment_portofolio_fragment" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="eu.tutorials.investlink.HomePage.fragment.profile_fragment"
+        android:label="fragment_profile_fragment"
+        tools:layout="@layout/fragment_profile_fragment" />
+    <fragment
+        android:id="@+id/sosial_fragment"
+        android:name="eu.tutorials.investlink.HomePage.fragment.sosial_fragment"
+        android:label="fragment_sosial_fragment"
+        tools:layout="@layout/fragment_sosial_fragment" />
+    <fragment
+        android:id="@+id/transaksi_fragment"
+        android:name="eu.tutorials.investlink.TransaksiPage.transaksi_fragment"
+        android:label="fragment_transaksi_fragment"
+        tools:layout="@layout/fragment_transaksi_fragment" />
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="eu.tutorials.investlink.HomePage.fragment.home_fragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home_fragment">
+    </fragment>
+
+</navigation>

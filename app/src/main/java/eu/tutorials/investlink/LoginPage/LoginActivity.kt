@@ -4,6 +4,8 @@ import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,6 +16,7 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import eu.tutorials.investlink.HomePage.HomePage
+import eu.tutorials.investlink.MainActivity
 import eu.tutorials.investlink.R
 
 class LoginActivity : AppCompatActivity() {
@@ -74,14 +77,24 @@ class LoginActivity : AppCompatActivity() {
     }
     /*Login Activity*/
     private fun loginAct(){
+        val email = getEmail.text.toString().trim()
+        val pass = getPassword.text.toString().trim()
 
-        firestore.collection("user")
-            .get()
-            .addOnSuccessListener {
-                startActivity(Intent(this, HomePage::class.java))
+        if (TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Email tidak boleh kosong", Toast.LENGTH_SHORT).show()
+        } else if (TextUtils.isEmpty(pass)){
+                Toast.makeText(this,"Password tidak boleh kosong", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener {
-                Toast.makeText(this, "Eamil dan Password Tidak cocok", LENGTH_SHORT).show()
+        FirebaseFirestore.getInstance().collection("user").document().get()
+            .addOnSuccessListener{ task ->
+                if (task!==null) {
+                    Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
+                }
             }
     }
 

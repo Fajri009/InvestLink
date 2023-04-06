@@ -16,7 +16,7 @@
             android:layout_width="31dp"
             android:layout_height="31dp"
             android:layout_margin="20dp"
-            android:src="@drawable/img" />
+            />
         <TextView
             android:layout_width="180dp"
             android:layout_height="31dp"

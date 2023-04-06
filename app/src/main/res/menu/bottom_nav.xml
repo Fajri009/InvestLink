@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:icon="@drawable/home_icon"
-        android:id="@+id/nav_home"></item>
+        android:id="@+id/home_fragment"></item>
     <item
         android:icon="@drawable/portofolio_icon"
-        android:id="@+id/nav_portofolio"></item>
+        android:id="@+id/portofolio_fragment"></item>
     <item
         android:icon="@drawable/sosial_icon"
-        android:id="@+id/nav_sosial"></item>
+        android:id="@+id/sosial_fragment"></item>
     <item
         android:icon="@drawable/transaksi_icon"
-        android:id="@+id/nav_trasaksi"
+        android:id="@+id/transaksi_fragment"
         ></item>
     <item
         android:icon="@drawable/profile_icon"
-        android:id="@+id/nav_profil"
+        android:id="@+id/profile_fragment"
         ></item>
 </menu>
