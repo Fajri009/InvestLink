@@ -16,8 +16,7 @@
             android:layout_height="35dp"
             android:layout_width="35dp"
             android:src="@drawable/back_button"
-            app:tint="@color/text_primary"
-            />
+            app:tint="@color/text_primary" />
 
         <TextView
             android:text="Register"

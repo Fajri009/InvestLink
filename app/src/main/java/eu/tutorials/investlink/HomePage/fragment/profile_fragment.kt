@@ -13,8 +13,6 @@ import eu.tutorials.investlink.R
 
 
 class profile_fragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
