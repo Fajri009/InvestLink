@@ -69,6 +69,7 @@ class RegisterPassword : AppCompatActivity() {
                         intent.putExtra("noTelp", noTelp.toString())
                         intent.putExtra("password", passwordStr)
                         startActivity(intent)
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                     } else {
                         Toast.makeText(this, "Password tidak memenuhi kriteria", Toast.LENGTH_SHORT).show()
                     }
@@ -79,5 +80,10 @@ class RegisterPassword : AppCompatActivity() {
                 Toast.makeText(this,"Isi password dan konfirmasi password terlebih dahulu", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 }

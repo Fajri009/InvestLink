@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="225dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_border_guide">
+
+        <ImageView
+            android:id="@+id/businessFoto"
+            android:layout_width="145dp"
+            android:layout_height="91dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="2dp"
+            android:src="@drawable/business_2"
+            />
+
+        <TextView
+            android:id="@+id/businessDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_text_days"
+            android:fontFamily="@font/nunitomedium"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="2 more days"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/line_business"
+            android:paddingLeft="1.5dp"
+            android:paddingRight="1.5dp"
+            app:layout_constraintTop_toBottomOf="@+id/businessFoto"/>
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Stock"
+            android:textSize="11sp"
+            android:textColor="@color/theme_color"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/businessFoto" />
+
+        <TextView
+            android:id="@+id/businessJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Kebuli Abuya 10 Cabang Jabo..."
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stock" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressTint="@color/theme_color"
+            app:layout_constraintTop_toBottomOf="@+id/businessJudul"
+            android:progress="32"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Business Value"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+        <TextView
+            android:id="@+id/businessValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="32%"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+        <TextView
+            android:id="@+id/businessMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Rp 1.947.500.000"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

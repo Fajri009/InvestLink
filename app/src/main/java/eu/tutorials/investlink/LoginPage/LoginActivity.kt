@@ -5,18 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import eu.tutorials.investlink.HomePage.HomePage
-import eu.tutorials.investlink.MainActivity
+import eu.tutorials.investlink.HomePage.MainActivity
 import eu.tutorials.investlink.R
 
 class LoginActivity : AppCompatActivity() {
@@ -89,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnSuccessListener{ task ->
                 if (task!==null) {
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, HomePage::class.java)
                     startActivity(intent)
                     finish()
                 } else {

@@ -43,6 +43,7 @@ class RegisterNama : AppCompatActivity() {
                 intent.putExtra("firstName", namaDepan.toString())
                 intent.putExtra("lastName", namaBelakang.toString())
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             } else {
                 Toast.makeText(this,"Isi nama depan dan nama belakang terlebih dahulu", Toast.LENGTH_SHORT).show()
             }

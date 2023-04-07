@@ -26,7 +26,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:boxBackgroundColor="@color/cardview_light_background"
-            android:layout_marginBottom="40dp">
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp">
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
@@ -42,7 +47,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             app:boxBackgroundColor="@color/cardview_light_background"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp">
 
             <EditText
                 android:id="@+id/pass"
