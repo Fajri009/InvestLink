@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/portofolio_fragment"
-        android:name="eu.tutorials.investlink.HomePage.fragment.portofolio_fragment"
+        android:name="eu.tutorials.investlink.PortofolioPage.portofolio_fragment"
         android:label="fragment_portofolio_fragment"
         tools:layout="@layout/fragment_portofolio_fragment" />
     <fragment

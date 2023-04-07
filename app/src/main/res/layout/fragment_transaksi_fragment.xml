@@ -163,20 +163,24 @@
         </LinearLayout>
     </LinearLayout>
 
-<TableLayout
-    android:id="@+id/tab_layout_transaksi"
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tab_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-</TableLayout>
+    android:layout_height="40dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="20dp"
+    android:layout_below="@id/template">
+</com.google.android.material.tabs.TabLayout>
 <androidx.viewpager2.widget.ViewPager2
     android:id="@+id/viewpager_transaksi"
     android:layout_width="match_parent"
-    android:layout_height="39dp"
+    android:layout_height="wrap_content"
     android:layout_below="@id/template"
     android:layout_marginStart="25dp"
     android:layout_marginEnd="25dp"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="60dp"
     android:orientation="horizontal">
 </androidx.viewpager2.widget.ViewPager2>
 
