@@ -1,7 +1,10 @@
 package eu.tutorials.investlink.HomePage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import eu.tutorials.investlink.HomePage.Adapter.BusinessAdapter
@@ -9,17 +12,28 @@ import eu.tutorials.investlink.HomePage.Adapter.GuideAdapter
 import eu.tutorials.investlink.HomePage.Model.BusinessView
 import eu.tutorials.investlink.HomePage.Model.GuideView
 import eu.tutorials.investlink.R
+import eu.tutorials.investlink.SaldoPage.SaldoPage
 
 class HomePage : AppCompatActivity() {
-    private lateinit var guideView: RecyclerView
+    private lateinit var guideView : RecyclerView
     private lateinit var businessView : RecyclerView
+    private lateinit var template : LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_home_fragment)
 
+        template = findViewById(R.id.template)
+
+        btnSaldo()
         guideList()
         businessList()
+    }
+
+    fun btnSaldo() {
+        template.setOnClickListener {
+            startActivity(Intent(this, SaldoPage::class.java))
+        }
     }
 
     fun guideList() {
