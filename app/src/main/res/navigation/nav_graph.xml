@@ -29,7 +29,6 @@
         android:id="@+id/home_fragment"
         android:name="eu.tutorials.investlink.HomePage.fragment.home_fragment"
         android:label="fragment_home_fragment"
-        tools:layout="@layout/fragment_home_fragment">
-    </fragment>
+        tools:layout="@layout/fragment_home_fragment"/>
 
 </navigation>

@@ -11,7 +11,6 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.google.firebase.firestore.FirebaseFirestore
-import eu.tutorials.investlink.HomePage.HomePage
 import eu.tutorials.investlink.HomePage.MainActivity
 import eu.tutorials.investlink.R
 

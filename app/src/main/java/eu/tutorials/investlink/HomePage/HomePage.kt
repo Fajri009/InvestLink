@@ -1,45 +1,67 @@
 package eu.tutorials.investlink.HomePage
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import eu.tutorials.investlink.HomePage.Adapter.BusinessAdapter
 import eu.tutorials.investlink.HomePage.Adapter.GuideAdapter
 import eu.tutorials.investlink.HomePage.Model.BusinessView
 import eu.tutorials.investlink.HomePage.Model.GuideView
+import eu.tutorials.investlink.ListBusinessPage.ListBusiness
 import eu.tutorials.investlink.R
 import eu.tutorials.investlink.SaldoPage.SaldoPage
 
-class HomePage : AppCompatActivity() {
+class HomePage : Fragment() {
     private lateinit var guideView : RecyclerView
     private lateinit var businessView : RecyclerView
     private lateinit var template : LinearLayout
+    private lateinit var seeBusiness : Button
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_home_fragment)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_home_fragment, container, false)
+        template = view.findViewById(R.id.template)
+        seeBusiness = view.findViewById(R.id.see_business)
 
-        template = findViewById(R.id.template)
-
-        btnSaldo()
         guideList()
         businessList()
+
+        return view
     }
 
-    fun btnSaldo() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        guideView = view.findViewById(R.id.guideView)
+        businessView = view.findViewById(R.id.businessView)
+
+        btnSaldo()
+        seeBusiness()
+    }
+
+    private fun btnSaldo() {
         template.setOnClickListener {
-            startActivity(Intent(this, SaldoPage::class.java))
+            startActivity(Intent(requireActivity(), SaldoPage::class.java))
         }
     }
 
-    fun guideList() {
-        guideView = findViewById(R.id.guideView)
+    private fun seeBusiness() {
+        seeBusiness.setOnClickListener {
+            startActivity(Intent(requireActivity(), ListBusiness::class.java))
+        }
+    }
+
+    private fun guideList() {
         guideView.setHasFixedSize(true)
-        guideView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        guideView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val guideList = mutableListOf<GuideView>()
 
@@ -52,10 +74,9 @@ class HomePage : AppCompatActivity() {
         guideView.adapter = guideAdapter
     }
 
-    fun businessList() {
-        businessView = findViewById(R.id.businessView)
+    private fun businessList() {
         businessView.setHasFixedSize(true)
-        businessView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        businessView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val businessList = mutableListOf<BusinessView>()
 
@@ -68,4 +89,3 @@ class HomePage : AppCompatActivity() {
         businessView.adapter = businessAdapter
     }
 }
-
