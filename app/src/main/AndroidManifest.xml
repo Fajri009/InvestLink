@@ -44,6 +44,9 @@
         <activity
             android:name=".SaldoPage.SaldoPage"
             android:exported="true" />
+        <activity
+            android:name=".ListBusinessPage.ListBusiness"
+            android:exported="true" />
     </application>
 
 </manifest>

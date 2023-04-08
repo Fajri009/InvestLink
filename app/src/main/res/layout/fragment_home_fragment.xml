@@ -215,10 +215,10 @@
                         android:textColor="@color/black"
                         android:textSize="10sp"
                         app:cornerRadius="20dp" />
-
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/guideView"
             android:layout_width="match_parent"

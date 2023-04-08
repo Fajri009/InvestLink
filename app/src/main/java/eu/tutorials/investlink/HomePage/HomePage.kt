@@ -31,20 +31,15 @@ class HomePage : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home_fragment, container, false)
         template = view.findViewById(R.id.template)
         seeBusiness = view.findViewById(R.id.see_business)
-
-        guideList()
-        businessList()
-
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         guideView = view.findViewById(R.id.guideView)
         businessView = view.findViewById(R.id.businessView)
 
         btnSaldo()
+        guideList()
         seeBusiness()
+        businessList()
+
+        return view
     }
 
     private fun btnSaldo() {

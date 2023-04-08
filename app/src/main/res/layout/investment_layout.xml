@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginBottom="20dp"
+    app:cardElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_border_guide">
+
+        <ImageView
+            android:id="@+id/businessFoto"
+            android:layout_width="145dp"
+            android:layout_height="91dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="2dp"
+            android:src="@drawable/business_2"
+            />
+
+        <TextView
+            android:id="@+id/businessStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_text_days"
+            android:fontFamily="@font/nunitomedium"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Stock"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/line_business"
+            android:paddingLeft="1.5dp"
+            android:paddingRight="1.5dp"
+            app:layout_constraintTop_toBottomOf="@+id/businessFoto"/>
+
+        <TextView
+            android:id="@+id/businessDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Last Day"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/businessFoto" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="170dp">
+        <TextView
+            android:id="@+id/businessJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitomedium"
+            android:text="Alfamidi Panyileukan Bandung"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/businessFoto" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunitomedium"
+                android:text="Retails"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/businessJudul" />
+
+            <TextView
+                android:id="@+id/businessValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunitomedium"
+                android:text="32%"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@+id/businessJudul" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
