@@ -1,37 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomePage.fragment.profile_fragment">
+    android:layout_height="wrap_content"
+    tools:context=".PortofolioPage.portofolio_fragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
+        android:id="@+id/toolbar"
+        android:layout_height="70dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:paddingTop="10dp">
         <ImageView
-            android:id="@+id/backPage"
-            android:layout_width="31dp"
-            android:layout_height="31dp"
-            android:layout_margin="20dp"
-            />
-        <TextView
-            android:layout_width="180dp"
-            android:layout_height="31dp"
-            android:text="Balance"
-            android:layout_margin="20dp"
-            android:textSize="20dp"
-            android:fontFamily="@font/nunitobold"
-            android:textAlignment="center"/>
+            android:id="@+id/profile"
+            android:layout_height="55dp"
+            android:layout_width="55dp"
+            android:src="@drawable/baseline_account_circle_24"
+            app:tint="@color/text_primary" />
+
         <ImageView
             android:id="@+id/chatAdmin"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/chat" />
+            android:layout_height="35dp"
+            android:layout_width="35dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/chat_admin"
+            app:tint="@color/text_primary" />
     </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/identitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:src="@drawable/account_yellow"
+            android:layout_marginEnd="30dp"></ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farrel Rabiultsani"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunitosemibold"
+                android:textColor="@color/black">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="f*****@t********t"
+                android:textSize="14dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/template"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/identitas"
+        android:background="@drawable/template"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:weightSum="2"
+        android:paddingTop="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Portfolio"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/nunitomedium"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/line_template"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/portfolio"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nunitomedium"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amounce Balance"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/nunitomedium"
+                    android:textColor="@color/black"
+                    />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/line_template"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/balance"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nunitomedium"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/template"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

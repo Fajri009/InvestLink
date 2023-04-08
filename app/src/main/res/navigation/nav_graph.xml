@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_portofolio_fragment" />
     <fragment
         android:id="@+id/profile_fragment"
-        android:name="eu.tutorials.investlink.HomePage.fragment.profile_fragment"
+        android:name="eu.tutorials.investlink.ProfilePage.profile_fragment"
         android:label="fragment_profile_fragment"
         tools:layout="@layout/fragment_profile_fragment" />
     <fragment
