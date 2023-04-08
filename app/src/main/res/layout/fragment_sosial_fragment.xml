@@ -1,23 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage.fragment.sosial_fragment">
+    tools:context=".SosialPage.sosial_fragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="70dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:paddingTop="10dp">
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_height="55dp"
+            android:layout_width="55dp"
+            android:src="@drawable/baseline_account_circle_24"
+            app:tint="@color/text_primary" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sosial Fragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+        <ImageView
+            android:id="@+id/chatAdmin"
+            android:layout_height="35dp"
+            android:layout_width="35dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/chat_admin"
+            app:tint="@color/text_primary" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:paddingTop="20dp"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/scrollview"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/seaech_background"
+            android:backgroundTint="#E0E6EA"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/tool"></ImageView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sosial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</RelativeLayout>

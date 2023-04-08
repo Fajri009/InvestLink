@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_profile_fragment" />
     <fragment
         android:id="@+id/sosial_fragment"
-        android:name="eu.tutorials.investlink.HomePage.fragment.sosial_fragment"
+        android:name="eu.tutorials.investlink.SosialPage.sosial_fragment"
         android:label="fragment_sosial_fragment"
         tools:layout="@layout/fragment_sosial_fragment" />
     <fragment
@@ -30,5 +30,4 @@
         android:name="eu.tutorials.investlink.HomePage.fragment.home_fragment"
         android:label="fragment_home_fragment"
         tools:layout="@layout/fragment_home_fragment"/>
-
 </navigation>
